@@ -21,12 +21,6 @@ short_description: A small AI that sits next to you while you write code
 
 ---
 
-## 100-word summary (for the application)
-
-Most code-review tooling is binary or noisy — pass/fail, or a sea of nitpicks. The AI Pair Engineer targets the moment *during* writing, not the audit after: paste a snippet, get back three structured outputs in a single LLM call — design flaws with severity and line refs, pytest scaffolds that guard the gaps it found, and a unified-diff refactor for the top issues. Built with Qwen 2.5 Coder via Hugging Face Inference, structured JSON output for tool-chain integration, Gradio UI on HF Spaces. ~200 lines of Python. The point is integration, not impressing.
-
----
-
 ## Why this design
 
 | Decision | Reasoning |
