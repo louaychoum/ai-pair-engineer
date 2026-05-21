@@ -15,9 +15,9 @@ from prompt import SYSTEM_PROMPT, build_user_prompt
 
 
 MODEL = os.environ.get("HF_MODEL", "Qwen/Qwen2.5-Coder-32B-Instruct")
-HF_TOKEN = os.environ.get("HF_TOKEN")  # Optional locally; auto-provided on HF Spaces.
+HF_TOKEN = os.environ.get("HF_TOKEN") or os.environ.get("HUGGING_FACE_HUB_TOKEN")
 
-client = InferenceClient(model=MODEL, token=HF_TOKEN)
+client = InferenceClient(model=MODEL, api_key=HF_TOKEN)
 
 
 def _extract_json(raw: str) -> dict:
